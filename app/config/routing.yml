@@ -1,0 +1,41 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+home:
+    path: /
+    defaults: { _controller: AppBundle:Default:index }
+
+mainmenu:
+    path: /menu
+    defaults: { _controller: AppBundle:Default:menu}
+
+contactus:
+    path: /contactus
+    defaults: { _controller: AppBundle:Default:contactus }
+
+blog_list:
+    path: /blog
+    defaults: { _controller: AppBundle:Blog:index}
+
+blog_article:
+    path: /blog/{id}
+    defaults: { _controller: AppBundle:Blog:show }
+    requirements:
+        article: \d+
+
+blog_create:
+    path: /blog/create
+    defaults: { _controller: AppBundle:Blog:create }
+
+about_us:
+    path: /aboutus
+    defaults: { _controller: AppBundle:Default:aboutus }
+
+admin_view:
+    path: /admin
+    defaults: { _controller: AppBundle:Admin:index }
+
+email:
+    path: /mail
+    defaults: { _controller: AppBundle:Default:mail }

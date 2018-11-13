@@ -1,0 +1,14 @@
+<h3>Feedback from our site!</h3>
+
+{{ date }}
+<br/>
+{{ name }} with phone number {{ phone }} and ip-address {{ ip }} just has sent us feedback from {{ email }}:
+<br/>
+{{ message }}
+{# example, assuming you have a route named "login" #}
+To view all the data at the site, go to: <a href="{{ url('admin_view') }}">...</a>.
+
+Thanks!
+
+{# Makes an absolute URL to the /images/logo.png file #}
+<img src="{{ absolute_url(asset('img/videoframe.jpg')) }}">
